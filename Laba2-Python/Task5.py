@@ -1,4 +1,6 @@
 import random
+import ConsoleInput
+import ArrayHelper
 
 def generate_matrix(rows, cols, min_value, max_value):
     matrix = []
@@ -24,7 +26,7 @@ def calculate_column_with_min_sum(matrix):
     print("Номер стовпця з мінімальною сумою елементів:", min_sum_column_index + 1)
     print("Величина цієї суми:", min_sum)
 
-def run():
+def Run():
     print("Завдання 5. У заданій матриці розмірності 6 на 4 визначити номер стовпця з мінімальною " +
           "сумою елементів і величину цієї суми.")
 

@@ -1,7 +1,8 @@
-from Extensions import ConsoleInput
+import ConsoleInput
+import ArrayHelper
 import sys
 
-def run():
+def Run():
     print("Завдання 2. Задано масив. Знайти суму чисел, що знаходяться між максимальним і мінімальним елементами масиву")
     print("(в суму включити ці елементи). Вивести суму на екран.")
 
