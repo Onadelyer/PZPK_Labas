@@ -19,7 +19,7 @@ def InputNumberAndGetDigits(number):
         digit = int(number % 10)
         number = int(number // 10)
 
-        if i == 2 or i == 5:
+        if i == 2 or i == 4:
             sum += digit
 
         i += 1

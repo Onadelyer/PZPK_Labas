@@ -8,9 +8,12 @@ namespace PZPK_Labas.Laba2
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
 
-            Task1.Run();
+            Task6.Run();
+            Console.ReadKey();
             //RunTask2();
+            Console.ReadKey();
             //RunTask9();
+            Console.ReadKey();
         }
     }
 }

@@ -14,7 +14,7 @@ namespace PZPK_Labas.Laba1
 
         private static void GetFunctionValue()
         {
-            int x;
+            double x;
             ConsoleInput.SafeIntInput("Введіть значення аргументу", out x);
 
             if (x < -4 || x > 10)

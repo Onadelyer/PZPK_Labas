@@ -7,7 +7,7 @@ def Run():
 
     radius = Extensions.SafeIntInput("Введіть радіус мішені")
 
-    count_of_shoots = 3
+    count_of_shoots = 4
 
     for i in range(count_of_shoots):
         print(f"Постріл №{i + 1}")
@@ -17,7 +17,7 @@ def Run():
         calculate_hit(i + 1, x, y, radius)
 
 def calculate_hit(i, x, y, radius):
-    result = Task4.is_point_in_circle((x, y), radius)
+    result = Task4.CalculatePointInCircle((x, y), radius)
 
     print(f"{'Постріл №' + str(i):<10} | ({x:<3}, {y:<3}) | {'Попав' if result else 'Не попав':<7}")
 

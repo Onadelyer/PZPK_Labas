@@ -12,7 +12,7 @@ namespace PZPK_Labas.Laba1
             int radius;
             ConsoleInput.SafeIntInput("Введіть радіус мішені", out radius);
 
-            int countOfShoots = 3;
+            int countOfShoots = 4;
 
             for (int i = 0; i < countOfShoots; i++)
             {

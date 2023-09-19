@@ -4,7 +4,7 @@ namespace PZPK_Labas.Laba1
 {
     public static class Task5
     {
-        private static void Run()
+        public static void Run()
         {
             Console.WriteLine("Завдання 5. Написати програму, яка по даті народження (день d місяць n) визначає знак зодіаку.");
 

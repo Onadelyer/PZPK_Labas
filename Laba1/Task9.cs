@@ -20,7 +20,7 @@
             double x = 0.1;
             int n = 1;
 
-            do
+            while (true)
             {
                 double addAmount = Math.Pow(-1, n - 1) * Math.Pow(x, n - 1) / (Math.Pow(2 * n, n) - 1);
 
@@ -29,7 +29,7 @@
 
                 sum += addAmount;
                 n++;
-            } while (true);
+            }
 
             sum = Math.Round(sum, 3);
 

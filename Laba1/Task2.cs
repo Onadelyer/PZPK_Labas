@@ -45,7 +45,7 @@ namespace PZPK_Labas.Laba1
                 var digit = number % 10;
                 number = Math.Truncate(number / 10);
 
-                if (i == 2 || i == 5)
+                if (i == 2 || i == 4)
                     sum += (int)digit;
 
                 i++;

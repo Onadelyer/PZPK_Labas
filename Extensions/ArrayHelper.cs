@@ -15,7 +15,7 @@ namespace Extensions
             Random random = new Random();
 
             for (int i = 0; i < countOfElements; i++)
-                array[i] = random.Next(elementMin, elementMax);
+                array[i] = random.Next(elementMin, elementMax+1);
 
             return array;
         }
@@ -30,6 +30,17 @@ namespace Extensions
             return array;
         }
 
+        public static int[,] InputMatrix(int countOfCollums, int countOfRows)
+        {
+            int[,] matrix = new int[countOfCollums, countOfRows];
+
+            for (int i = 0; i < countOfCollums; i++)
+                for (int j = 0; j < countOfRows; j++)
+                    ConsoleInput.SafeIntInput($"Елемент [{i + 1}][{j + 1}]", out matrix[i, j]);
+
+            return matrix;
+        }
+
         public static int[,] GenerateMatrix(int countOfCollums, int countOfRows, int elementMin = -100, int elementMax = 100)
         {
             int[,] matrix = new int[countOfCollums, countOfRows];
@@ -38,10 +49,11 @@ namespace Extensions
 
             for (int i = 0; i < countOfCollums; i++)
                 for (int j = 0; j < countOfRows; j++)
-                    matrix[i, j] = random.Next(elementMin, elementMax);
+                    matrix[i, j] = random.Next(elementMin, elementMax+1);
 
             return matrix;
         }
+
 
         public static void PrintArray(int[] array)
         {
@@ -51,6 +63,15 @@ namespace Extensions
             Console.WriteLine();
         }
 
+        public static void PrintArray(double[] array)
+        {
+            for (int i = 0; i < array.Length; i++)
+                Console.Write("{0, 5}", array[i]);
+
+            Console.WriteLine();
+        }
+
+
         public static void PrintMatrix(int[,] matrix)
         {
             for (int i = 0; i < matrix.GetLength(0); i++)
@@ -59,6 +80,22 @@ namespace Extensions
                 {
                     Console.Write("{0, 5}", matrix[i, j]);
                 }
+                Console.WriteLine();
+                Console.WriteLine();
+            }
+
+            Console.WriteLine();
+        }
+
+        public static void PrintMatrix(double[,] matrix)
+        {
+            for (int i = 0; i < matrix.GetLength(0); i++)
+            {
+                for (int j = 0; j < matrix.GetLength(1); j++)
+                {
+                    Console.Write("{0, 5}", matrix[i, j]);
+                }
+                Console.WriteLine();
                 Console.WriteLine();
             }
 
