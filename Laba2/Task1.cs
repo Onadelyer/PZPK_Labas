@@ -27,9 +27,6 @@ namespace PZPK_Labas.Laba2
 
             Console.WriteLine("Оброблений масив:");
             ArrayHelper.PrintArray(GetModifiedArray(array, GetAveregeNumberOfArray(array)));
-
-            Console.WriteLine();
-            Console.ReadLine();
         }
 
         private static int[] GetModifiedArray(int[] array, int average)

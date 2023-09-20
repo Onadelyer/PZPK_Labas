@@ -2,6 +2,17 @@ import random
 import ConsoleInput
 import ArrayHelper
 
+def Run():
+    print("Завдання 5. У заданій матриці розмірності 6 на 4 визначити номер стовпця з мінімальною " +
+          "сумою елементів і величину цієї суми.")
+
+    matrix = ArrayHelper.GenerateMatrix(6, 4, -50, 49)
+
+    print("Матриця:")
+    ArrayHelper.PrintMatrix(matrix)
+
+    calculate_column_with_min_sum(matrix)
+
 def generate_matrix(rows, cols, min_value, max_value):
     matrix = []
     for _ in range(rows):
@@ -25,14 +36,3 @@ def calculate_column_with_min_sum(matrix):
             min_sum_column_index = j
     print("Номер стовпця з мінімальною сумою елементів:", min_sum_column_index + 1)
     print("Величина цієї суми:", min_sum)
-
-def Run():
-    print("Завдання 5. У заданій матриці розмірності 6 на 4 визначити номер стовпця з мінімальною " +
-          "сумою елементів і величину цієї суми.")
-
-    matrix = generate_matrix(6, 4, -50, 49)
-
-    print("Матриця:")
-    print_matrix(matrix)
-
-    calculate_column_with_min_sum(matrix)

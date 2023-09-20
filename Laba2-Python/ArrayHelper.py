@@ -38,6 +38,18 @@ def GenerateMatrix(countOfColumns, countOfRows, elementMin = -100, elementMax = 
 
     return matrix
 
+def GenerateStepMatrix(countOfRows, elementMin = -100, elementMax = 100):
+    matrix = []
+
+    for i in range(countOfRows):
+        row = []
+        for j in range(i + 1):
+            row.append(random.randint(elementMin, elementMax))
+        matrix.append(row)
+
+    return matrix
+
+
 def PrintArray(array):
     for i in range(len(array)):
         print("{0:5}".format(array[i]), end='')
@@ -48,4 +60,10 @@ def PrintMatrix(matrix):
         for j in range(len(matrix[i])):
             print("{0:5}".format(matrix[i][j]), end='')
         print()
+        print()
+        
+def PrintStepMatrix(matrix):
+    for i in range(len(matrix)):
+        for j in range(len(matrix[i])):
+            print("{0:5}".format(matrix[i][j]), end='')
         print()

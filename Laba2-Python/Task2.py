@@ -7,35 +7,21 @@ def Run():
     print("(в суму включити ці елементи). Вивести суму на екран.")
 
     n = ConsoleInput.SafeIntInput("Введіть кількість елементів масиву")
-    array = generate_array(n)
+    array = ArrayHelper.GenerateArray(n)
 
     print("Масив: ")
-    print_array(array)
+    ArrayHelper.PrintArray(array)
 
     get_sum_between_max_and_min(array)
-
-def generate_array(n):
-    array = []
-    for i in range(n):
-        array.append(i+1)
-    return array
 
 def print_array(array):
     for i in range(len(array)):
         print(f"Елемент {i+1}: {array[i]}")
 
 def get_sum_between_max_and_min(array):
-    maxIndex = array[0]
-    minIndex = array[0]
-    sum = 0
-
-    for i in range(len(array)):
-        if array[i] > array[i+1]:
-            maxIndex = i
-
-    for i in range(len(array)):
-        if array[i] > array[i + 1]:
-             maxIndex = i
+    maxIndex = array.index(max(array))
+    minIndex = array.index(min(array))
+    sum = 0    
 
     firstIndex = min(maxIndex, minIndex)
     secondIndex = max(maxIndex, minIndex)
@@ -44,6 +30,3 @@ def get_sum_between_max_and_min(array):
         sum+= array[i]
 
     print("Cума між мінімальним і максимальним елементом:", sum)
-
-if __name__ == "__main__":
-    run()

@@ -10,13 +10,13 @@ def Run():
     y = 0
 
     print("Введіть розмірність матриці: ")
-    x = safe_int_input("\tX")
-    y = safe_int_input("\tY")
+    x = ConsoleInput.SafeIntInput("\tX")
+    y = ConsoleInput.SafeIntInput("\tY")
 
-    matrix = generate_matrix(y, x)
+    matrix = ArrayHelper.GenerateMatrix(x, y)
 
     print("Матриця")
-    print_matrix(matrix)
+    ArrayHelper.PrintMatrix(matrix)
 
     calculate_rows_with_no_repeat_numbers(matrix)
 
@@ -46,11 +46,3 @@ def print_matrix(matrix):
         for elem in row:
             print(elem, end="\t")
         print()
-
-def safe_int_input(prompt):
-    while True:
-        try:
-            value = int(input(prompt + ": "))
-            return value
-        except ValueError:
-            print("Invalid input. Please enter an integer.")

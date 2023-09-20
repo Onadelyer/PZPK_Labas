@@ -1,4 +1,4 @@
-﻿ions;
+﻿using Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,9 +35,9 @@ namespace PZPK_Labas.Laba2
                 int x = arrayX[i];
 
                 if (Math.Cos(x) > 0)
-                    arrayY[i] = Math.Pow(x, 3) - 7.5;
+                    arrayY[i] = Math.Round(Math.Pow(x, 3) - 7.5, 2);
                 else if (Math.Sin(x) <= 0)
-                    arrayY[i] = Math.Pow(x, 2) - (5 * Math.Pow(Math.E, Math.Sin(x)));
+                    arrayY[i] = Math.Round(Math.Pow(x, 2) - (5 * Math.Pow(Math.E, Math.Sin(x))), 2);
             }
 
             return arrayY;

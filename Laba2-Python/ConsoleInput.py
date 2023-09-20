@@ -1,4 +1,4 @@
-def safe_int_input(message):
+def SafeIntInput(message):
     while True:
         try:
             value = int(input(message + ": "))
@@ -6,7 +6,7 @@ def safe_int_input(message):
         except ValueError:
             print("Введіть ціле число!")
 
-def safe_double_input(message):
+def SafeFloatInput(message):
     while True:
         try:
             value = float(input(message + ": "))

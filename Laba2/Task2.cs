@@ -27,23 +27,28 @@ namespace PZPK_Labas.Laba2
 
         private static void GetSumBetweenMaxAndMin(int[] array)
         {
-            int maxIndex = array[0];
-            int minIndex = array[0];
+            int maxIndex = 0;
+            int minIndex = 0;
             int sum = 0;
 
-            for(int i = 0; i < array.Length; i++)
-                if (array[i] > array[i+1])
-                    maxIndex = i;
+            // Find max and min index
             for (int i = 0; i < array.Length; i++)
-                if (array[i] > array[i + 1])
+            {
+                if (array[i] > array[maxIndex])
                     maxIndex = i;
 
+                if (array[i] < array[minIndex])
+                    minIndex = i;
+            }
 
-            int firstIndex = maxIndex < minIndex ? minIndex : maxIndex;
-            int secondIndex = maxIndex > minIndex ? minIndex : maxIndex;
+            Console.WriteLine("Максимальний елемент: " + array[maxIndex] + " | " + "Мінімальний елемент: " + array[minIndex]);
+
+
+            int firstIndex = maxIndex > minIndex ? minIndex : maxIndex;
+            int secondIndex = maxIndex < minIndex ? minIndex : maxIndex;
 
             for(int i = firstIndex; i <= secondIndex;i++)
-                sum+= array[i];
+                sum += array[i];
 
             Console.WriteLine("Cума між мінімальним і максимальним елементом: " + sum);
         }

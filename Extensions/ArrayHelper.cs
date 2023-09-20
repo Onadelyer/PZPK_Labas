@@ -54,6 +54,40 @@ namespace Extensions
             return matrix;
         }
 
+        public static int[][] GenerateStepMatrix(int n, int min, int max)
+        {
+            int[][] matrix = new int[n][];
+            Random random = new Random();
+
+            for (int i = 0; i < n; i++)
+            {
+                matrix[i] = new int[i+1];
+                for (int j = 0; j <= i; j++)
+                {
+                    matrix[i][j] = random.Next(min, max + 1);
+                }
+            }
+
+            return matrix;
+        }
+
+        public static int[][] InputStepMatrix(int n)
+        {
+            int[][] matrix = new int[n][];
+
+            for (int i = 0; i < n; i++)
+            {
+                matrix[i] = new int[i];
+                for (int j = 0; j < n; j++)
+                {
+                    ConsoleInput.SafeIntInput($"Елемент [{i + 1}][{j + 1}]", out matrix[i][j]);
+                }
+            }
+
+            return matrix;
+        }
+
+
 
         public static void PrintArray(int[] array)
         {
@@ -66,7 +100,7 @@ namespace Extensions
         public static void PrintArray(double[] array)
         {
             for (int i = 0; i < array.Length; i++)
-                Console.Write("{0, 5}", array[i]);
+                Console.Write("{0, 11}", array[i]);
 
             Console.WriteLine();
         }
@@ -100,6 +134,18 @@ namespace Extensions
             }
 
             Console.WriteLine();
+        }
+
+        public static void PrintStepMatrix(int[][] matrix)
+        {
+            foreach (int[] row in matrix)
+            {
+                foreach (int element in row)
+                {
+                    Console.Write("{0, 5}", element);
+                }
+                Console.WriteLine();
+            }
         }
     }
 }

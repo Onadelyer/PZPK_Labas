@@ -26,17 +26,19 @@ namespace PZPK_Labas.Laba2
         {
             int minSum = int.MaxValue;
             int minSumColumnIndex = -1;
-            for (int i = 0; i < matrix.GetLength(0); i++)
+
+            for (int i = 0; i < matrix.GetLength(1); i++)
             {
-                int sum = 0;
-                for (int j = 0; j < matrix.GetLength(1); j++)
-                    sum += matrix[i, j];
-                if (sum < minSum)
+                int columnSum = 0;
+                for (int j = 0; j < matrix.GetLength(0); j++)
+                    columnSum += matrix[j, i];
+                if (columnSum < minSum)
                 {
-                    minSum = sum;
+                    minSum = columnSum;
                     minSumColumnIndex = i;
                 }
             }
+
             Console.WriteLine($"Номер стовпця з мінімальною сумою елементів: {minSumColumnIndex + 1}");
             Console.WriteLine($"Величина цієї суми: {minSum}");
         }
