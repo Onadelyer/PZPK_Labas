@@ -1,0 +1,18 @@
+﻿<Page x:Class="Laba3_Csharp.Task_pages.Task1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Laba3_Csharp.Task_pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Task1" Foreground="{x:Null}" Background="White">
+
+    <Grid>
+        <Button Content="Generate matrix" HorizontalAlignment="Right" VerticalAlignment="Top" Height="51" Width="120" Margin="0,119,10,0" FontSize="14" Click="GenerateButton_Click"/>
+        <Label Content="Input" HorizontalAlignment="Left" Margin="71,175,0,0" VerticalAlignment="Top"/>
+        <Label Content="Output" HorizontalAlignment="Left" Margin="236,175,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="InputBox" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" Height="160" Background="#FFFFFDAA" IsReadOnly="True" AutomationProperties.HelpText="qweqweqwe"/>
+        <TextBox x:Name="OutputBox" HorizontalAlignment="Left" Margin="180,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" Height="160" Background="#FFFFFDAA" IsReadOnly="True"/>
+    </Grid>
+</Page>
