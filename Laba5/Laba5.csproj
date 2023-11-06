@@ -3,15 +3,12 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net7.0-windows</TargetFramework>
-    <RootNamespace>Laba3_Csharp</RootNamespace>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Update="Task-pages\Task3.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
 </Project>

@@ -1,0 +1,24 @@
+﻿<Page x:Class="Laba3_Csharp.Task_pages.Task3"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Laba3_Csharp.Task_pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Task2">
+
+    <Grid>
+        <Frame Background="White"/>
+        <TextBox x:Name="OutputBox" HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="780" Height="29" FontSize="11"/>
+        <StackPanel Margin="0,91
+,0,0" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Button x:Name="LinearSearch" Content="Linear search" Width="80" Margin="0,0,10,0"/>
+            <Button x:Name="BinarySearch" Content="Binary search" Width="80" Margin="0,0,10,0"/>
+            <Button x:Name="LongestCommonSubstringSearch" Content="Longest Common Substring Search" Width="200" Margin="0,0,10,0"/>
+        </StackPanel>
+        <Button x:Name="Generate" Content="Generate" Width="80" Height="40" Click="GenerateNumbersToSort" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,130,0,0"/>
+        <TextBox x:Name="IndexOutput" HorizontalAlignment="Center" Margin="0,44,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="780" Height="29" FontSize="11"/>
+
+    </Grid>
+</Page>

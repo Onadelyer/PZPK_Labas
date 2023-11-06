@@ -1,0 +1,20 @@
+﻿<Page x:Class="Laba5.Tasks.Task2"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Laba5.Tasks"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Task2">
+
+    <Grid Background="White">
+        <TextBlock Name="TF_1" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="215" Width="360" Background="#FFF0F0F0">
+        </TextBlock>
+        <TextBlock Name="TF_2" HorizontalAlignment="Right" Margin="0,10,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="215" Width="360" Background="#FFF0F0F0"/>
+        <Label Content="TF_1" HorizontalAlignment="Left" Margin="176,230,0,0" VerticalAlignment="Top"/>
+        <Label Content="TF_2" HorizontalAlignment="Left" Margin="596,230,0,0" VerticalAlignment="Top"/>
+        <Button Content="Generate Text" HorizontalAlignment="Center" Margin="0,267,0,0" VerticalAlignment="Top" Height="44" Width="136" Click="Button_Click"/>
+
+    </Grid>
+</Page>
