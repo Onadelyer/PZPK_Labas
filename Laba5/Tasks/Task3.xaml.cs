@@ -31,7 +31,16 @@ namespace Laba5.Tasks
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string formattedText = Regex.Replace(Input.Text, "#");
+            MatchCollection matches = Regex.Matches(Input.Text);
+            int maxWordLengh = matches.Max(x => x.Value.Length);
+
+            string formattedText = matches.Select(match => match.Value).Select(match =>
+            {
+                if(match.Length == maxWordLengh)
+                    return ReplaceAllCharacters(match, '#');
+                else
+                    return match;
+            }).Aggregate((x, y) => x + " " + y);
 
             FileHandler.WriteToTextFile("Original.txt", Input.Text.Split('\n'));
             FileHandler.WriteToTextFile("Formatted.txt", formattedText.Split('\n'));
@@ -43,6 +52,16 @@ namespace Laba5.Tasks
         {
             Input.Text = string.Join("\n", FileHandler.ReadFromTextFile("Original.txt"));
             Output.Text = string.Join("\n", FileHandler.ReadFromTextFile("Formatted.txt"));
+        }
+
+        private static string ReplaceAllCharacters(string word, char replacementChar)
+        {
+            char[] charArray = word.ToCharArray();
+            for (int i = 0; i < charArray.Length; i++)
+            {
+                charArray[i] = replacementChar;
+            }
+            return new string(charArray);
         }
     }
 }
