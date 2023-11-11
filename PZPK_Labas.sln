@@ -25,6 +25,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Laba5", "Laba5\Laba5.csproj
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Laba4-Python", "Laba4-Python\Laba4-Python.pyproj", "{7BDEDF82-F76D-412C-842E-E8D99D45CA9D}"
 EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Laba5-Python", "Laba5-Python\Laba5-Python.pyproj", "{04482CA3-E41A-445E-8789-D54609EC30AF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,8 @@ Global
 		{A9BA026C-630D-4CEC-B492-536DF04DFA89}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7BDEDF82-F76D-412C-842E-E8D99D45CA9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7BDEDF82-F76D-412C-842E-E8D99D45CA9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04482CA3-E41A-445E-8789-D54609EC30AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04482CA3-E41A-445E-8789-D54609EC30AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

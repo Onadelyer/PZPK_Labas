@@ -9,15 +9,18 @@
       Title="Task5">
 
     <Grid Background="White">
-        <TextBox Name="textBox1" HorizontalAlignment="Left" Height="23" Margin="48,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="textBox2" HorizontalAlignment="Left" Height="23" Margin="48,75,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <ComboBox Name="operationComboBox" HorizontalAlignment="Left" Margin="48,115,0,0" VerticalAlignment="Top" Width="120">
+        <TextBox Name="variable1Box" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="35" Margin="30,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" IsReadOnly="True" FontSize="16"/>
+        <TextBox Name="variable2Box" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="35" Margin="210,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="139" IsReadOnly="True" FontSize="16"/>
+        <ComboBox Name="operationComboBox" HorizontalAlignment="Left" Margin="390,50,0,0" VerticalAlignment="Top" Width="139" Height="35" FontSize="18">
             <ComboBoxItem Content="+"/>
             <ComboBoxItem Content="-"/>
             <ComboBoxItem Content="*"/>
             <ComboBoxItem Content="/"/>
         </ComboBox>
-        <Button Content="Show Result" Name="showResultButton" Click="showResultButton_Click" HorizontalAlignment="Left" Margin="48,155,0,0" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Result:" HorizontalAlignment="Left" Margin="48,195,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="resultBox" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="35" Margin="30,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="499" IsReadOnly="True" FontSize="16"/>
+        <Label Content="Параметр 1" HorizontalAlignment="Left" Margin="30,19,0,0" VerticalAlignment="Top"/>
+        <Label Content="Параметр 2" HorizontalAlignment="Left" Margin="210,19,0,0" VerticalAlignment="Top"/>
+        <Button Content="Вирахувати результат" Name="showResultButton" Click="CalculateResult" HorizontalAlignment="Left" Margin="30,170,0,0" VerticalAlignment="Top" Width="139" Height="34"/>
+        <Button Content="Завантажити файл" x:Name="showResultButton_Copy" Click="LoadDataFromFile" HorizontalAlignment="Left" Margin="390,170,0,0" VerticalAlignment="Top" Width="139" Height="34"/>
     </Grid>
 </Page>

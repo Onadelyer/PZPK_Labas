@@ -43,7 +43,7 @@ namespace Laba5
         }
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
-
+            MainFrame.Navigate(new Tasks.Task5());
         }
     }
 }
