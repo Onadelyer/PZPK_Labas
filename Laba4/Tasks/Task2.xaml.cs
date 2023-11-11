@@ -21,7 +21,7 @@ namespace Laba4.Tasks
     /// </summary>
     public partial class Task2 : Page
     {
-        private Regex regex = new Regex("10|[0-9]|[A-F]");
+        private Regex regex = new Regex(@"\b(10|[0-9]|[A-F])\.(10|[0-9]|[A-F])\.(10|[0-9]|[A-F])\.(10|[0-9]|[A-F])\b");
 
         public Task2()
         {

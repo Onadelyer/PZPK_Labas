@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file './MainWindow.ui'
+# Form implementation generated from reading ui file '.\MainWindow.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.10
 #
@@ -17,23 +17,9 @@ class Ui_MainWindow(object):
         MainWindow.resize(800, 600)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
-        self.mainFrame = QtWidgets.QFrame(self.centralwidget)
-        self.mainFrame.setGeometry(QtCore.QRect(0, 80, 801, 491))
-        self.mainFrame.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.mainFrame.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.mainFrame.setObjectName("mainFrame")
-        self.task1Button = QtWidgets.QPushButton(self.centralwidget)
-        self.task1Button.setGeometry(QtCore.QRect(10, 10, 131, 61))
-        self.task1Button.setObjectName("task1Button")
-        self.task2Button = QtWidgets.QPushButton(self.centralwidget)
-        self.task2Button.setGeometry(QtCore.QRect(150, 10, 131, 61))
-        self.task2Button.setObjectName("task2Button")
-        self.task3Button = QtWidgets.QPushButton(self.centralwidget)
-        self.task3Button.setGeometry(QtCore.QRect(290, 10, 131, 61))
-        self.task3Button.setObjectName("task3Button")
-        self.task4Button = QtWidgets.QPushButton(self.centralwidget)
-        self.task4Button.setGeometry(QtCore.QRect(430, 10, 131, 61))
-        self.task4Button.setObjectName("task4Button")
+        self.tabWidget = QtWidgets.QTabWidget(self.centralwidget)
+        self.tabWidget.setGeometry(QtCore.QRect(0, 10, 801, 561))
+        self.tabWidget.setObjectName("tabWidget")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 26))
@@ -49,10 +35,6 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.task1Button.setText(_translate("MainWindow", "Task1"))
-        self.task2Button.setText(_translate("MainWindow", "Task2"))
-        self.task3Button.setText(_translate("MainWindow", "Task3"))
-        self.task4Button.setText(_translate("MainWindow", "Task4"))
 
 
 if __name__ == "__main__":
