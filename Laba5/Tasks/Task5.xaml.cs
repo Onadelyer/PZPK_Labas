@@ -17,9 +17,6 @@ using System.Windows.Shapes;
 
 namespace Laba5.Tasks
 {
-    /// <summary>
-    /// Interaction logic for Task5.xaml
-    /// </summary>
     public partial class Task5 : Page
     {
         public Task5()
