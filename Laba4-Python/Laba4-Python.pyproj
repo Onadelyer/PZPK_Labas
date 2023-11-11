@@ -2,17 +2,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>0ed1de54-8899-4f24-af71-88fb204a7c02</ProjectGuid>
+    <ProjectGuid>7bdedf82-f76d-412c-842e-e8d99d45ca9d</ProjectGuid>
     <ProjectHome>.</ProjectHome>
     <StartupFile>main.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
-    <Name>Laba2-Python</Name>
-    <RootNamespace>Laba2-Python</RootNamespace>
-    <InterpreterId>
-    </InterpreterId>
+    <Name>Laba4-Python</Name>
+    <RootNamespace>Laba4-Python</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -23,16 +21,15 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="ArrayHelper.py" />
-    <Compile Include="ConsoleInput.py" />
     <Compile Include="main.py" />
-    <Compile Include="Task1.py" />
-    <Compile Include="Task2.py" />
-    <Compile Include="Task3.py" />
-    <Compile Include="Task4.py" />
-    <Compile Include="Task5.py" />
-    <Compile Include="Task6.py" />
-    <Compile Include="Task7.py" />
+    <Compile Include="Tasks\MainWindow.py" />
+    <Compile Include="Tasks\Task1.py" />
+    <Compile Include="Tasks\Task2.py" />
+    <Compile Include="Tasks\Task3.py" />
+    <Compile Include="Tasks\Task4.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Tasks\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
