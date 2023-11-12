@@ -31,5 +31,7 @@ def read_from_binary_file(file_path):
         with open(file_path, 'rb') as file:
             read_object = pickle.load(file)
             return read_object
+    except EOFError:
+        return None  # or handle the error in your specific way
     except (pickle.UnpicklingError, FileNotFoundError):
         return None  # or handle the error in your specific way

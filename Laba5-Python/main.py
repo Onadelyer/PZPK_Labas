@@ -1,6 +1,8 @@
 from logging import FileHandler
 import random
 import re
+import numpy as np
+import pickle
 from datetime import datetime
 from datetime import date
 from PyQt5.QtWidgets import QMainWindow, QApplication, QFrame, QTableWidgetItem, QVBoxLayout, QTableWidget
@@ -134,12 +136,124 @@ class Task3(QFrame, Ui_Task3):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
+        self.formatButton.clicked.connect(self.formatText)
+        self.loadTextToBoxes()
         
+    def formatText(self):
+        text = self.inputBox.toPlainText()
+        
+        replacedText = self.replaceLongestWordWithHash(text)
+        
+        fileHandler.write_to_binary_file("inputTask3.bin", text)
+        fileHandler.write_to_binary_file("outputTask3.bin", replacedText)
+
+        self.inputBox.setPlainText(text)
+        self.outputBox.setPlainText(replacedText)
+
+    def loadTextToBoxes(self):
+        inputText = fileHandler.read_from_binary_file("inputTask3.bin")
+        if inputText == None:
+            pass
+        else:
+            self.inputBox.setPlainText(inputText)
+            
+        outputText = fileHandler.read_from_binary_file("outputTask3.bin")
+        if outputText == None:
+            pass
+        else:
+            self.outputBox.setPlainText(outputText)
+                
+        
+
+    def replaceLongestWordWithHash(self, text):
+        words = text.split()
+    
+        if not words:
+            return text
+
+        longest_word = max(words, key=len)
+
+        replaced_word = '#' * len(longest_word)
+
+        modified_text = text.replace(longest_word, replaced_word)
+
+        return modified_text
+    
+
 class Task4(QFrame, Ui_Task4):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
+        self.formattButton.clicked.connect(self.formattButtonClick)
+        self.loadTableFromBinaryFile(self.inputMatrix, "inputMatrix.bin")
+        self.loadTableFromBinaryFile(self.outputMatrix, "outputMatrix.bin")
+        self.formattMatrix()
+
+    def formattButtonClick(self):
+        inputMatrix = self.getMatrixFromTable(self.inputMatrix)
+        outputMatrix = self.getRotatedMatrixOn90Degrees(inputMatrix)
         
+
+        fileHandler.write_to_binary_file("inputMatrix.bin", inputMatrix)
+        fileHandler.write_to_binary_file("outputMatrix.bin", outputMatrix)
+        
+        self.fillTableWithMatrix(inputMatrix, self.inputMatrix)
+        self.fillTableWithMatrix(outputMatrix, self.outputMatrix)
+    
+    def formattMatrix(self):
+        if self.inputMatrix.columnCount() == 0 and self.inputMatrix.rowCount() == 0:
+            self.fillTableWithMatrix(np.zeros((5, 5), dtype=int), self.inputMatrix)
+            self.fillTableWithMatrix(np.zeros((5, 5), dtype=int), self.outputMatrix)
+
+    def getRotatedMatrixOn90Degrees(self, matrix):
+        rotatedMatrix = np.rot90(matrix)
+        return rotatedMatrix
+    
+    def loadTableFromBinaryFile(self, table, fileName):
+        try:
+            with open(fileName, 'rb') as file:
+                matrix = pickle.load(file)
+
+                table.setRowCount(len(matrix))
+                table.setColumnCount(len(matrix[0]))
+
+                for i in range(len(matrix)):
+                    for j in range(len(matrix[0])):
+                        item = QTableWidgetItem(str(matrix[i, j]))
+                        table.setItem(i, j, item)
+                        table.setColumnWidth(i, 50)
+
+        except:
+            pass
+
+    def getMatrixFromTable(self, table):
+        rowCount = table.rowCount()
+        columnCount = table.columnCount()
+        matrix = np.zeros((rowCount, columnCount), dtype=int)
+
+        for i in range(rowCount):
+            for j in range(columnCount):
+                item = table.item(i, j)
+                if item is not None:
+                    matrix[i, j] = int(item.text())
+
+        return matrix
+    
+    def fillTableWithMatrix(self, matrix, table):
+        table.setRowCount(0)
+        table.setColumnCount(0)
+
+        table.setRowCount(matrix.shape[0])
+        table.setColumnCount(matrix.shape[1])
+        
+        
+
+        for i in range(matrix.shape[0]):
+            for j in range(matrix.shape[1]):
+                item = QTableWidgetItem(str(matrix[i, j]))
+                table.setItem(i, j, item)
+                table.setColumnWidth(i, 50)
+
 class Task5(QFrame, Ui_Task5):
     def __init__(self):
         super().__init__()
