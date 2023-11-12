@@ -21,9 +21,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="fileHandler.py" />
     <Compile Include="main.py" />
     <Compile Include="Tasks\MainWindow.py" />
-    <Compile Include="Tasks\Task1.py" />
     <Compile Include="Tasks\Task2.py" />
     <Compile Include="Tasks\Task3.py" />
     <Compile Include="Tasks\Task4.py" />
@@ -31,6 +31,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Tasks\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="keepers.json" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
