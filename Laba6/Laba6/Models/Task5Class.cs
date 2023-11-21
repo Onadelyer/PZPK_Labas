@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Laba6.Models
 {
-    class Airplane
+    public class Airplane
     {
         public string Brand { get; set; }
         public string Model { get; set; }
@@ -28,11 +28,11 @@ namespace Laba6.Models
 
         public string Info()
         {
-            return $"Airplane: {Brand} {Model}, Max speed: {MaxSpeed} km/h, Max altitude: {MaxAltitude} m, Cost: {Cost()}";
+            return $"Airplane: {Brand} {Model}, \nMax speed: {MaxSpeed} km/h, \nMax altitude: {MaxAltitude} m, \nCost: {Cost()}";
         }
     }
 
-    class Bomber : Airplane
+    public class Bomber : Airplane
     {
         public string PilotName { get; set; }
 
@@ -49,11 +49,11 @@ namespace Laba6.Models
 
         public new string Info()
         {
-            return $"Bomber: {Brand} {Model}, Max speed: {MaxSpeed} km/h, Max altitude: {MaxAltitude} m, Cost: {Cost()}, Pilot: {PilotName}";
+            return $"Bomber: {Brand} {Model}, \nMax speed: {MaxSpeed} km/h, \nMax altitude: {MaxAltitude} m, \nCost: {Cost()}, \nPilot: {PilotName}";
         }
     }
 
-    class Fighter : Airplane
+    public class Fighter : Airplane
     {
         public string MissionGroup { get; set; }
 
@@ -70,7 +70,7 @@ namespace Laba6.Models
 
         public new string Info()
         {
-            return $"Fighter: {Brand} {Model}, Max speed: {MaxSpeed} km/h, Max altitude: {MaxAltitude} m, Cost: {Cost()}, Mission group: {MissionGroup}";
+            return $"Fighter: {Brand} {Model}, \nMax speed: {MaxSpeed} km/h, \nMax altitude: {MaxAltitude} m, \nCost: {Cost()}, \nMission group: {MissionGroup}";
         }
     }
 }

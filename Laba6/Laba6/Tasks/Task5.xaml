@@ -8,7 +8,25 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Task5">
 
-    <Grid>
-        
+    <Grid Background="White">
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Height="169">
+            <Label x:Name="Label1"/>
+            <Label x:Name="Label2"/>
+            <Label x:Name="Label3"/>
+        </StackPanel>
+        <TextBox Name="TextBoxBrand" HorizontalAlignment="Left" Margin="10,178,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="TextBoxModel" HorizontalAlignment="Left" Margin="10,201,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="TextBoxMaxSpeed" HorizontalAlignment="Left" Margin="10,224,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="TextBoxMaxAltitude" HorizontalAlignment="Left" Margin="10,247,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <ComboBox Name="ComboBoxType" HorizontalAlignment="Left" Margin="10,270,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="Airplane"/>
+            <ComboBoxItem Content="Bomber"/>
+            <ComboBoxItem Content="Fighter"/>
+        </ComboBox>
+        <Button Content="Add object" HorizontalAlignment="Left" Margin="140,270,0,0" VerticalAlignment="Top" Height="22" Width="138" Click="Button_Click"/>
+        <Label Content="Марка" HorizontalAlignment="Left" Margin="135,174,0,0" VerticalAlignment="Top"/>
+        <Label Content="Модель" HorizontalAlignment="Left" Margin="135,197,0,0" VerticalAlignment="Top"/>
+        <Label Content="Максимальна швидкість" HorizontalAlignment="Left" Margin="135,220,0,0" VerticalAlignment="Top"/>
+        <Label Content="Максимальна висота" HorizontalAlignment="Left" Margin="135,243,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Page>

@@ -16,7 +16,7 @@ namespace Laba6.Models
 
         public PrintedPublication()
         {
-            title = "Невідомий заголовок";
+            title = "PrintedPublication";
             author = "Невідомий автор";
             year = 2000;
         }
@@ -49,7 +49,7 @@ namespace Laba6.Models
         {
             label.Content = $"Назва: {title}\n"+
                 $"Автор: {author}\n"+
-                $"Рік видання: {year}\n";
+                $"Рік видання: {year}";
         }
     }
 
@@ -60,6 +60,7 @@ namespace Laba6.Models
         public Magazine() : base()
         {
             genre = "Невідомий жанр";
+            title = "Magazine";
         }
 
         public Magazine(string title, string author, int year, string genre) : base(title, author, year)
@@ -75,7 +76,7 @@ namespace Laba6.Models
         public override void Show(Label label)
         {
             base.Show(label);
-            label.Content += $"Жанр: {genre}";
+            label.Content += $"\nЖанр: {genre}";
         }
     }
 
@@ -86,6 +87,7 @@ namespace Laba6.Models
         public Book() : base()
         {
             pageCount = 0;
+            title = "Book";
         }
 
         public Book(string title, string author, int year, int pageCount) : base(title, author, year)
@@ -101,7 +103,7 @@ namespace Laba6.Models
         public override void Show(Label label)
         {
             base.Show(label);
-            label.Content += $"Кількість сторінок: {pageCount}";
+            label.Content += $"\nКількість сторінок: {pageCount}";
         }
     }
 
@@ -112,6 +114,7 @@ namespace Laba6.Models
         public Textbook() : base()
         {
             subject = "Невідомий предмет";
+            title = "Textbook";
         }
 
         public Textbook(string title, string author, int year, int pageCount, string subject) : base(title, author, year, pageCount)
@@ -127,7 +130,7 @@ namespace Laba6.Models
         public override void Show(Label label)
         {
             base.Show(label);
-            label.Content += $"Предмет: {subject}";
+            label.Content += $"\nПредмет: {subject}";
         }
     }
 }

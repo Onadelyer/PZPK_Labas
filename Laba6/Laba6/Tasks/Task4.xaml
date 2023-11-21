@@ -9,6 +9,12 @@
       Title="Task4">
 
     <Grid Background="White">
-        
+        <Button Content="Calculate price for all" Margin="0,270,0,0" Click="Button_Click" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <StackPanel Margin="0,0,0,213" Orientation="Horizontal">
+            <Label Content="Label" x:Name="Label1"/>
+            <Label Content="Label" x:Name="Label2"/>
+            <Label Content="Label" x:Name="Label3"/>
+            <Label Content="Label" x:Name="Label4"/>
+        </StackPanel>
     </Grid>
 </Page>
