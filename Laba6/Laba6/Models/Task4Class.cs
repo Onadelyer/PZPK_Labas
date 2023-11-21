@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
+using System.Windows.Navigation;
 
 namespace Laba6.Models
 {
@@ -38,17 +40,16 @@ namespace Laba6.Models
             Console.WriteLine($"Об'єкт {title} утилізовано.");
         }
 
-        public virtual void DisplayInfo()
+        public virtual int GetPrice()
         {
-            Console.WriteLine($"Назва: {title}");
-            Console.WriteLine($"Автор: {author}");
-            Console.WriteLine($"Рік видання: {year}");
+            return 30;
         }
 
-        public void Show()
+        public virtual void Show(Label label)
         {
-            Console.WriteLine("Інформація про об'єкт:");
-            DisplayInfo();
+            label.Content = $"Назва: {title}\n"+
+                $"Автор: {author}\n"+
+                $"Рік видання: {year}\n";
         }
     }
 
@@ -66,10 +67,15 @@ namespace Laba6.Models
             this.genre = genre;
         }
 
-        public override void DisplayInfo()
+        public override int GetPrice()
         {
-            base.DisplayInfo();
-            Console.WriteLine($"Жанр: {genre}");
+            return 50;
+        }
+
+        public override void Show(Label label)
+        {
+            base.Show(label);
+            label.Content += $"Жанр: {genre}";
         }
     }
 
@@ -87,10 +93,15 @@ namespace Laba6.Models
             this.pageCount = pageCount;
         }
 
-        public override void DisplayInfo()
+        public override int GetPrice()
         {
-            base.DisplayInfo();
-            Console.WriteLine($"Кількість сторінок: {pageCount}");
+            return 20;
+        }
+
+        public override void Show(Label label)
+        {
+            base.Show(label);
+            label.Content += $"Кількість сторінок: {pageCount}";
         }
     }
 
@@ -108,10 +119,15 @@ namespace Laba6.Models
             this.subject = subject;
         }
 
-        public override void DisplayInfo()
+        public override int GetPrice()
         {
-            base.DisplayInfo();
-            Console.WriteLine($"Предмет: {subject}");
+            return 70;
+        }
+
+        public override void Show(Label label)
+        {
+            base.Show(label);
+            label.Content += $"Предмет: {subject}";
         }
     }
 }

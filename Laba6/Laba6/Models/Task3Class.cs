@@ -8,19 +8,17 @@ namespace Laba6.Models
 {
     public class Task3Class : CustomData
     {
-        public int appliedForce;
+        public int AgeOfProduct;
 
 
-        public Task3Class(int day, int month, int year, int appliedForce) : base(day, month, year)
+        public Task3Class(int day, int month, int year) : base(day, month, year)
         {
-            this.appliedForce = appliedForce;
+
         }
 
-        public double CalculateWork(double force, double distance)
+        public void CalculateAgeOfProduct(int manifacturingYear)
         {
-            double work = (force * distance) * Math.Cos(0) * appliedForce;
-
-            return work;
+            AgeOfProduct = manifacturingYear - Year;
         }
     }
 }
