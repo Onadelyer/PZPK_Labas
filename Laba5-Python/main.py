@@ -162,9 +162,7 @@ class Task3(QFrame, Ui_Task3):
             pass
         else:
             self.outputBox.setPlainText(outputText)
-                
-        
-
+            
     def replaceLongestWordWithHash(self, text):
         words = text.split()
     
