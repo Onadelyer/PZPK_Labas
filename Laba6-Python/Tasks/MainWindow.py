@@ -20,12 +20,6 @@ class Ui_MainWindow(object):
         self.MainFrame = QtWidgets.QTabWidget(self.centralwidget)
         self.MainFrame.setGeometry(QtCore.QRect(0, 0, 801, 571))
         self.MainFrame.setObjectName("MainFrame")
-        self.tab = QtWidgets.QWidget()
-        self.tab.setObjectName("tab")
-        self.MainFrame.addTab(self.tab, "")
-        self.tab_2 = QtWidgets.QWidget()
-        self.tab_2.setObjectName("tab_2")
-        self.MainFrame.addTab(self.tab_2, "")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 26))
@@ -41,8 +35,6 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.MainFrame.setTabText(self.MainFrame.indexOf(self.tab), _translate("MainWindow", "Tab 1"))
-        self.MainFrame.setTabText(self.MainFrame.indexOf(self.tab_2), _translate("MainWindow", "Tab 2"))
 
 
 if __name__ == "__main__":

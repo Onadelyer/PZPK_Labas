@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Laba6.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,22 @@ namespace Laba6.Tasks
     /// </summary>
     public partial class Task6 : Page
     {
+        PlantDatabase PlantDatabase { get; set; } = new();
+
         public Task6()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            PlantDatabase.GeneratePlants();
+            PlantDatabase.DisplayInformationOnScreen(ResultLabel);
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            PlantDatabase.DisplayPlantsOnTheVergeOfExtinction(ResultLabel);
         }
     }
 }

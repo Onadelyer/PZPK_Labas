@@ -8,7 +8,10 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Task6">
 
-    <Grid>
-        
+    <Grid Background="White">
+        <Label Name="ResultLabel" Content="" HorizontalAlignment="Left" Margin="10,10,0,10" Height="430" Width="543" Background="#FFB7B7B7"/>
+        <Button Content="Generate plant list" HorizontalAlignment="Left" Margin="606,54,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <Button Content="Find Endangered Species" HorizontalAlignment="Left" Margin="588,91,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
+
     </Grid>
 </Page>

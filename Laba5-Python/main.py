@@ -38,8 +38,6 @@ class Task1(QFrame, Ui_Task1):
             self.refreshTable(self.keepersList)
                 
     def refreshTable(self, listt):
-        rowCount = 0    
-        
         self.dataTable.clearContents()
         self.dataTable.setRowCount(0)
 
@@ -176,7 +174,6 @@ class Task3(QFrame, Ui_Task3):
         modified_text = text.replace(longest_word, replaced_word)
 
         return modified_text
-    
 
 class Task4(QFrame, Ui_Task4):
     def __init__(self):

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Laba6.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,31 @@ namespace Laba6.Tasks
     /// </summary>
     public partial class Task7 : Page
     {
+        CustomOperatingSystem os = new CustomOperatingSystem();
+        MobileApp app = new MobileApp();
+
         public Task7()
         {
             InitializeComponent();
+
+            OSInstallButton.Click += (obj, e) => os.Install();
+            OSUpdateButton.Click += (obj, e) => os.Update(OS_Result);
+            OSWriteCodeButton.Click += (obj, e) => os.WriteCode();
+            OSTestCodeButton.Click += (obj, e) => os.TestCode();
+            OSRebootSystemButton.Click += (obj, e) => os.RebootSystem();
+            OSAddUserButton.Click += (obj, e) => os.AddUserToTheSystem();
+
+            MobileInstallButton.Click += (obj, e) => app.Install();
+            MobileUpdateButton.Click += (obj, e) => app.Update(Mobile_Result);
+            MobileWriteCodeButton.Click += (obj, e) => app.WriteCode();
+            MobileTestCodeButton.Click += (obj, e) => app.TestCode();
+            MobileTurnOnSecretChinaSpyCameraButton.Click += (obj, e) => app.TurnOnSecretChinaSpyCamera();
+            MobileEnableRootAccessButton.Click += (obj, e) => app.EnableRootAccess();
+
+            OS_Result.Content = os.ToString();
+            Mobile_Result.Content = app.ToString();
         }
+
+
     }
 }

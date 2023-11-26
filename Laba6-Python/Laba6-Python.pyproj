@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>d6f8ca76-792d-470f-8135-8c47b45d54ba</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Laba6_Python.py</StartupFile>
+    <StartupFile>main.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,7 +21,29 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Laba6_Python.py" />
+    <Compile Include="main.py" />
+    <Compile Include="Tasks\MainWindow.py" />
+    <Compile Include="Tasks\Task1.py" />
+    <Compile Include="Tasks\Task2.py" />
+    <Compile Include="Tasks\Task3.py" />
+    <Compile Include="Tasks\Task4.py" />
+    <Compile Include="Tasks\Task5.py" />
+    <Compile Include="Tasks\Task6.py" />
+    <Compile Include="Tasks\Task7.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Tasks\" />
+    <Folder Include="Tasks\__pycache__\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Tasks\__pycache__\MainWindow.cpython-312.pyc" />
+    <Content Include="Tasks\__pycache__\Task1.cpython-312.pyc" />
+    <Content Include="Tasks\__pycache__\Task2.cpython-312.pyc" />
+    <Content Include="Tasks\__pycache__\Task3.cpython-312.pyc" />
+    <Content Include="Tasks\__pycache__\Task4.cpython-312.pyc" />
+    <Content Include="Tasks\__pycache__\Task5.cpython-312.pyc" />
+    <Content Include="Tasks\__pycache__\Task6.cpython-312.pyc" />
+    <Content Include="Tasks\__pycache__\Task7.cpython-312.pyc" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
