@@ -19,7 +19,7 @@ class Ui_Frame(object):
         self.stopButton.setGeometry(QtCore.QRect(220, 220, 141, 41))
         self.stopButton.setObjectName("stopButton")
         self.resultLabel = QtWidgets.QLabel(Frame)
-        self.resultLabel.setGeometry(QtCore.QRect(80, 100, 191, 61))
+        self.resultLabel.setGeometry(QtCore.QRect(80, 60, 500, 120))
         font = QtGui.QFont()
         font.setPointSize(18)
         self.resultLabel.setFont(font)
@@ -34,9 +34,9 @@ class Ui_Frame(object):
     def retranslateUi(self, Frame):
         _translate = QtCore.QCoreApplication.translate
         Frame.setWindowTitle(_translate("Frame", "Frame"))
-        self.stopButton.setText(_translate("Frame", "Decrease day by 2"))
+        self.stopButton.setText(_translate("Frame", "Stop"))
         self.resultLabel.setText(_translate("Frame", "TextLabel"))
-        self.increaseButton.setText(_translate("Frame", "Increase year"))
+        self.increaseButton.setText(_translate("Frame", "Accelerate"))
 
 
 if __name__ == "__main__":

@@ -1,0 +1,18 @@
+﻿<Page x:Class="Laba7.Tasks.Task3"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Laba7.Tasks"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Task3">
+
+    <Grid Background="White">
+        <Label x:Name="ResultLabel" Margin="10,10,295,10" Height="430" Background="#FFCCCCCC"/>
+        <Button Content="Show game results" HorizontalAlignment="Left" Margin="604,117,0,0" VerticalAlignment="Top" Click="ShowButtonClick"/>
+        <Button Content="Select teams to championship" HorizontalAlignment="Left" Margin="574,142,0,0" VerticalAlignment="Top" Click="SelectButtonClick"/>
+        <Label Name="PassedCount" Content="Count of passed teams: " HorizontalAlignment="Left" Margin="587,199,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Page>

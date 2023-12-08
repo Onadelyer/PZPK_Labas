@@ -31,12 +31,14 @@ class CustomOperatingSystem(IProduct, IDeveloper):
         self.Name = "Bubuntu"
         self.new_feature_has_been_developed = False
         self.new_feature_has_been_tested = False
+        self.DeveloperName = "OS chad dev"
+        self.ProgrammingLanguage = "Cobol"
 
     def update(self, label):
         if self.new_feature_has_been_developed and self.new_feature_has_been_tested:
             QMessageBox.information(None, "Update", "Updating OS...")
             self.Version += 0.1
-            label.setText(str(self))
+            label.setText(self.__str__())
         else:
             if not self.new_feature_has_been_developed:
                 QMessageBox.warning(None, "Update", "New feature has not been developed")
@@ -70,6 +72,8 @@ class MobileApp(IProduct, IDeveloper):
         self.Name = "Cool app"
         self.new_feature_has_been_developed = False
         self.new_feature_has_been_tested = False
+        self.DeveloperName = "Android chad dev"
+        self.ProgrammingLanguage = "Kotlin"
 
     def update(self, label):
         if self.new_feature_has_been_developed and self.new_feature_has_been_tested:

@@ -31,6 +31,16 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Laba6", "Laba6\Laba6\Laba6.
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Laba6-Python", "Laba6-Python\Laba6-Python.pyproj", "{D6F8CA76-792D-470F-8135-8C47B45D54BA}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Laba7", "Laba7\Laba7.csproj", "{2B57339B-588E-4A33-ABC8-77440404FD3B}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Laba7-Python", "Laba7-Python\Laba7-Python.pyproj", "{10986804-1143-4FB6-AAC2-EF5D1C45A9E5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Laba10", "Laba10\Laba10.csproj", "{6E731145-788D-44C4-8400-9CF1D7EF1D55}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Laba11", "Laba11\Laba11.csproj", "{00494065-9E36-49F8-95D5-E20FE370BA39}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Laba10-Python", "Laba10-Python\Laba10-Python.pyproj", "{072B1221-3AD3-46F8-BF7B-7D05707F93C7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,6 +81,22 @@ Global
 		{029203EC-9E88-45DC-98D4-1DE8685E236C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D6F8CA76-792D-470F-8135-8C47B45D54BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D6F8CA76-792D-470F-8135-8C47B45D54BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B57339B-588E-4A33-ABC8-77440404FD3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B57339B-588E-4A33-ABC8-77440404FD3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B57339B-588E-4A33-ABC8-77440404FD3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B57339B-588E-4A33-ABC8-77440404FD3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10986804-1143-4FB6-AAC2-EF5D1C45A9E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10986804-1143-4FB6-AAC2-EF5D1C45A9E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E731145-788D-44C4-8400-9CF1D7EF1D55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E731145-788D-44C4-8400-9CF1D7EF1D55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E731145-788D-44C4-8400-9CF1D7EF1D55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E731145-788D-44C4-8400-9CF1D7EF1D55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00494065-9E36-49F8-95D5-E20FE370BA39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00494065-9E36-49F8-95D5-E20FE370BA39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00494065-9E36-49F8-95D5-E20FE370BA39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00494065-9E36-49F8-95D5-E20FE370BA39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{072B1221-3AD3-46F8-BF7B-7D05707F93C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{072B1221-3AD3-46F8-BF7B-7D05707F93C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

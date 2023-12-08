@@ -1,0 +1,26 @@
+﻿<Page x:Class="Laba7.Tasks.Task1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Laba7.Tasks"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Task1">
+
+    <Grid Background="White">
+        <Label x:Name="ResultLabel" Margin="10,10,400,10" Height="430" Width="390" Background="#FDD4D4D4"/>
+        <StackPanel Margin="499,67,116,21">
+            <Label Content="Name" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="12"/>
+            <TextBox Name="NameBox" TextWrapping="Wrap"/>
+            <Label Content="Group" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="12"/>
+            <TextBox Name="GroupBox" TextWrapping="Wrap"/>
+            <Label Content="Marks" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="12"/>
+            <TextBox Name="MarksBox" TextWrapping="Wrap"/>
+            <Button Content="Add student" Click="AddStudent"/>
+            <Button Content="Sort students" Click="SortStudents"/>
+            <Button Content="Select students" Click="SelectStudents"/>
+        </StackPanel>
+
+    </Grid>
+</Page>

@@ -6,7 +6,7 @@ class Ui_Frame(object):
         Frame.setObjectName("Frame")
         Frame.resize(800, 600)
         self.resultLabel = QtWidgets.QLabel(Frame)
-        self.resultLabel.setGeometry(QtCore.QRect(100, 100, 191, 61))
+        self.resultLabel.setGeometry(QtCore.QRect(100, 100, 500, 61))
         font = QtGui.QFont()
         font.setPointSize(18)
         self.resultLabel.setFont(font)

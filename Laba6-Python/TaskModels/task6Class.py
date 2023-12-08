@@ -2,27 +2,7 @@ from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QLabel, QMessage
 from abc import ABC, abstractmethod
 import random
 
-class IProduct(ABC):
-    @abstractmethod
-    def install(self):
-        pass
-
-    @abstractmethod
-    def update(self, label):
-        pass
-
-
-class IDeveloper(ABC):
-    @abstractmethod
-    def write_code(self):
-        pass
-
-    @abstractmethod
-    def test_code(self):
-        pass
-
-
-class Plant(IProduct, ABC):
+class Plant(ABC):
     def __init__(self):
         self.Name = ""
         self.Type = ""
